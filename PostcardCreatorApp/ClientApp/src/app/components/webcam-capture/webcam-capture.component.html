@@ -1,0 +1,9 @@
+<div style="border:solid;border-width:thin;padding:5px;margin:4px;width:332px">
+  WebCam
+  <br />
+  <video #video id="video" width="320" height="240" autoplay></video>
+  <br />
+  <button (click)="toggleWebcam()">{{activateWebcamBtnText}}</button>
+  <button (click)="captureImage()">Capture Image</button>
+  <div #alert class="alert alert-danger">{{alertText}}</div>
+</div>

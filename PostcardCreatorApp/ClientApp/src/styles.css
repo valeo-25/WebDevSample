@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+app-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.ng-modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  overflow: auto;
+  
+}
+
+.ng-modal-body {
+  padding: 20px;
+  background: #fff;
+  margin: 40px;
+  border: solid;
+}
+
+.ng-modal-background {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  background: rgba(255,255,255,.75);
+  z-index: 900;
+}

@@ -1,0 +1,32 @@
+<div>
+  <div style="text-align:center;">Image Preview</div>
+  <app-postcard #postcard></app-postcard>
+  <button style="display:block;margin-left:auto;margin-right:auto;" (click)="openModal()">Send</button>
+  <br />
+  <div style="margin:auto;width:650px;">
+    <div style="width:50%;float:left;">
+      <app-text-edit (textSettingsUpdated)="postcardTextUpdated($event)"></app-text-edit>
+      <br />
+      <p>Change the <b>Text</b> field to add text to the postcard, set the color, and position it with X and Y values.</p>
+      <p>Connect your webcam, press the <b>Activate</b> button, and when you're ready, <b>Capture</b> the image to add it to the postcard.</p>
+      <p>When you are satisified with your postcard, click <b>Send</b> to send your postcard via email. </p>
+    </div>
+    <app-webcam-capture style="width:50%;float:left;" (imageCaptured)="captureWebcamImage($event)"></app-webcam-capture>
+  </div>
+
+</div>
+
+<app-modal #modal>
+  <div class="ng-modal">
+    <div class="ng-modal-body">
+      <h2>Send Postcard</h2>
+      <p>
+        Recipient's Email Address: <input type="email" [(ngModel)]="toEmail" />
+      </p>
+      <button (click)="sendPostcard()">Send</button>
+      <button (click)="closeModal()">Close</button>
+      <div #modalinfo class="alert alert-success">Email Sent!</div>
+    </div>
+  </div>
+  <div class="ng-modal-background"></div>
+</app-modal>

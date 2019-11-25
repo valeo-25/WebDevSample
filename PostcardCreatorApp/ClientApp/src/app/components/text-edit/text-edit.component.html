@@ -1,0 +1,6 @@
+<div style="width:300px;display:flex;">
+  <span>Text: <input type="text" [(ngModel)]="textOptions.text" (ngModelChange)="updateTextSettings($event)" placeholder="Enter Postcard text here..." /></span>
+  <span>Color: <input type="color" [(ngModel)]="textOptions.color" (ngModelChange)="updateTextSettings($event)" /></span>
+  <span>Pos X: <input style="max-width:50px;" type="number" [(ngModel)]="textOptions.posX" (ngModelChange)="updateTextSettings($event)" /></span>
+  <span>Pos Y: <input style="max-width:50px;" type="number" [(ngModel)]="textOptions.posY" (ngModelChange)="updateTextSettings($event)" /></span>
+</div>
