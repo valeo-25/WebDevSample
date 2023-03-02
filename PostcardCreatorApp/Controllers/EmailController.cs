@@ -53,7 +53,7 @@ namespace PostcardCreatorApp.Controllers
                     smtpClient.Send(message);
                 }
             }
-            catch (Exception ex)
+            catch
             {
             }
         }
